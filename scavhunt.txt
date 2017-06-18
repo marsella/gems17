@@ -1,0 +1,142 @@
+IDEA
+A scavenger hunt. Follow a series of clues to learn programming ideas and
+relevant history, and earn a prize at the end! 
+
+PRIZES
+Let's be honest, probably candy. Is there a way to make this topical? 
+
+PROPOSED ORDER
+Caesar cipher (15 min) -> ENIAC (5 min) -> Image description (10 min)
+
+WORK REMAINING
+  - create clue materials
+  - add some more clues, probably. This should probably happen during the 1-hr
+    section and in its current state, it's not mroe than 30 min of activity.
+  - Image clue: decide whether this short lecture happens at the previous clue
+    or if it'll just be written down on the paper.
+
+CLUES 
+These can cover a variety of topics
+  - cryptography
+  - logic puzzlies
+  - computer science history
+
+> Caesar cipher.
+A short lecture on Caesar ciphers should be enough to clarify the general idea.
+Work a small example together, then use the provided Caesar cipher wheels to
+decipher your first clue.
+
+Materials: Caesar cipher wheels, physical copies of the first clue..
+
+History: The first recorded instance of a shift cipher of this style is by
+Julius Caesar, who used it to encrypt messages of military importance. Of
+course, it helped Caesar that most of his enemies were illiterate, and probably
+couldn't read his messages in the first place.
+
+While this is one of the most widely known encryption schemes, and also one of
+the easiest to use, it's also incredibly easy to break, so it's no longer
+recommended for any messages you'd actually like to keep secure.
+
+Method: Let's rewind for a second. The purpose of any encryption scheme is to
+send a message from one person to another, so that only the intended recipient
+can read the message. 
+
+In order to make the Caesar cipher work, the two people communicating need to
+have a shared secret. In this case, our secret is going to be a letter of the
+alphabet. 
+
+We usually break this down into a two-sept process. The person sending the
+message does something to garble up the message so nobody else can read it. This
+is called encryption. Then, the person who is supposed to receive the message
+needs to un-garble it and turn it back into a readable sentence. This is called
+decryption. 
+
+So, for the Caesar cipher, the encryption process looks like this:
+1. write down the alphabet
+   A B C D E F G ... X Y Z
+2. write it down again, but start with your secret letter. If you get to Z and
+you still have letters left, start over at A.
+   A B C D E F G ... X Y Z
+   K L M N O P Q ... H I J
+3. For every letter in your message, find the letter in the top alphabet, and
+write down the corresponding letter in the bottom alphabet. For example, if I
+wanted to encrypt the word "BEAD", I'd look up B -> L, E -> O, A -> K, D -> N.
+So our encrypted message is now "LOKN". 
+4. THen I'd send this message and the person would do the same thing, write down
+both alphabets, but instead of looking up letters in the top alphabet, they'd
+look up letters in the bottom alphabet and write down the corresponding letters
+from the top. So L -> B, O -> E, and so on, so they get back the same word I
+originally sent them. 
+
+> Image description
+Convert between grid coordinates and an image. Watch the image take shape.
+
+Materials: worksheets with grids and coordinates
+
+History: Some messages may contain something other than text, like an image. But
+all of our methods for encrypting messages only work on text data: letters,
+numbers, and punctuation. We need some way to convert from a rich kind of data,
+like an image or video, to text. This is one primitive way.
+
+Method: If you've ever heard a TV ad, you'll notice that they usually brag about
+some kind of number: 1080i or 720p. That number is referring to the number
+of pixels on the screen: a 1080 TV screen is actually made up of a giant grid of
+pixels, 1920 wide and 1080 tall. Each pixel can be a single color at a given
+time, so more pixels means a higher-definition image.
+
+What this also means is that we can define single moment on a TV screen by
+listing out the color of each pixel. This means we need two things: a unique way to
+reference each pixel, and a way to define colors. Usually, color is defined as
+a triple of values: how much do you have of red, blue, and green? Today, we're
+going to simplify that aspect and work in black and white. Basically, if a pixel
+is "on" then it's black, and if it's "off", it's white. 
+
+The problem that remains is how we're going to refer to each pixel. Let's look
+at a much smaller example.
+   _ _ _
+  |_|_|_|
+  |_|_|_|
+  
+Here we have a 2 x 3 grid of pixels. A very tiny TV, ify ou will. There are a
+couple ways we could refer to this. We could just number the boxes.
+   _ _ _
+  |1|2|3|
+  |4|5|6|
+   - - -
+If we want to color in the top box in the middle, we'd say, box 2 is "on". 
+
+But if we're going to get into massive grids the size of TV screens and larger,
+these numbers will get really alrge, really quickly. Is there another way we
+could refer to the boxes?
+
+< get audience input >
+
+Okay, one observation is that this is a grid, so every box has both a row and a
+column. We could use the row and column to uniquely refer to the boxes, and we'd
+way decrease the size of the number we'd need to use.
+
+    1_2_3_
+   1|_|_|_|
+   2|_|_|_|
+ 
+So, to color in the same box as before, we'd say, box (1,2) is "on". 
+
+Your next clue is an image, but we've encoded it into a text format. In order
+to figure out your next step, you'll need to convert it back to an image.
+
+> ENIAC
+A short research clue to learn more about the role of women in early computing.
+"Who were the first people to program computers? Find ENIAC and explain who was
+responsible" 
+
+or 
+
+"Who was Grace Hopper? What was her role in the early days of computers?"
+
+Materials: Paper clue, instructor stationed at ENIAC.
+
+
+
+
+
+
