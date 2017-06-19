@@ -1,0 +1,40 @@
+GEMS planning meeting 5/19/17
+=============================
+
+Goals for the workshop:
+1) Exposure to programming ideas
+2) "I made something"
+3) Be open to programming and CS in the future
+4) Why does it matter?
+
+Follow up on ideas:
+1) For coding projects, create a code reference sheet outlining main ideas, e.g.
+loops, if statements
+2) Wonder woman game on madewithcode.com: https://www.madewithcode.com/
+3) Hardware for boolean logic puzzles?
+4) micro:bit -- Michaille agreed to order 8-12!
+
+Lesson plans: Michaille told us each group will have (2) 1.5 hour sessions, plus
+(1) 1 hour session.
+
+1 hour session: scavenger hunt
+	- crypto caesar cipher
+	- graphics/pixels worksheet
+	- learn binary
+	- what is an algorithm (e.g. make a pb&j sandwich)
+	- mac authentication
+	- eniac history
+	- boolean logic
+
+1.5 hour session: block-based programming
+	- Wonder woman game? After playing the game, Jennifer prefers
+	http://lightbot.com/
+	- micro:bit block-based programming
+
+1.5 hour session: text-based programming
+	- expand micro:bit programming to python
+	- break up with paper activities to introduce concepts
+
+TODO: 
+	- work on scavenger hunt 
+	- brainstorm programming problems
