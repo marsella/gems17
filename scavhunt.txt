@@ -193,3 +193,31 @@ choose RC2 as the message digest algorithm, then hit 'compute hmac'. If the
 computed HMAC is the same, then you've found a valid clue! If it's not the same,
 someone has changed the message, and you probably shouldn't trust it.
 
+> Binary
+How do computers represent numbers?
+
+Materials: ?
+
+First, what is a number system? Numbers tell us how many of something there is,
+but there are different ways to represent numbers. Ask for examples. (base 10,
+Roman numerals, ticks on a board) What's the advantage of one over another? e.g.
+ticks on the board take up for space, but we can use anything to represent
+ticks. What can we use to represent base-10 numbers? (10 sided die, 10
+individual things) In order to represent a decimal number we something that can
+represent 10 different options.
+
+Consider digits 0-9, lined up in columns--recall 1's column, 10's column, 100's
+column. What is the pattern here? (× 10)
+
+Does anyone now how computers might represent numbers? (Binary) What does that
+mean? (2) Why? Computers and computer chips are made up of wires that have
+electrons/current running through them. A wire can be in one of two states: Has
+a current, or doesn't have a current. How can we use this to represent numbers?
+
+Consider digits 0-1, lined up in columns. Recall the 1's column, and then what?
+(×2)
+
+Joke/puzzle: There are 10 types of people in the world: those who understand
+binary, and those who don't.
+
+Other activities/approach: http://csunplugged.org/binary-numbers/

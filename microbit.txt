@@ -1,0 +1,25 @@
+Options for micro:bit programming
+
+Day 1: Language: javascript blocks
+
+1) Get a feel for basic constructs:
+	show leds/icon/string
+	construct sequences
+	loops: forever
+
+2) Rock paper scissors: https://pxt.microbit.org/projects/rock-paper-scissors
+   or Die roll: http://microbit.org/assets/documents/04%20Die%20Roll.pdf
+   or counter
+   or Truth or dare: http://microbit.org/assets/documents/05%20Truth%20or%20Dare.pdf
+	introduce variables
+	random numbers
+	input: a/b buttons, shake
+
+3) Extra activity: Something with communicating micro:bits, or music
+
+Day 2: Language: Python
+
+There's lots of info in the docs:
+http://microbit-micropython.readthedocs.io/en/latest/tutorials/introduction.html
+I'm not sure, this might be a lot of info to do in one session. Is it better to
+give more in-depth programming problems?
