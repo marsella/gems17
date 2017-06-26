@@ -7,13 +7,15 @@ Day 1: Language: javascript blocks
 	construct sequences
 	loops: forever
 
-2) Rock paper scissors: https://pxt.microbit.org/projects/rock-paper-scissors
-   or Die roll: http://microbit.org/assets/documents/04%20Die%20Roll.pdf
-   or counter
-   or Truth or dare: http://microbit.org/assets/documents/05%20Truth%20or%20Dare.pdf
+2) counter
 	introduce variables
+	input: a/b buttons
+
+3) Rock paper scissors: https://pxt.microbit.org/projects/rock-paper-scissors
+   or Die roll: http://microbit.org/assets/documents/04%20Die%20Roll.pdf
+   or Truth or dare: http://microbit.org/assets/documents/05%20Truth%20or%20Dare.pdf
 	random numbers
-	input: a/b buttons, shake
+	input: shake
 
 3) Extra activity: Something with communicating micro:bits, or music
 
