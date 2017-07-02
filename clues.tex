@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[margin=1.5in]{geometry}
+
+\begin{document}
+
+\section*{Clue 1: The Caesar Cipher}
+
+Use your Caesar Cipher wheel to decipher the following sentence. 
+
+The key is \textbf{K}.
+
+\vspace{5mm}
+
+XSMO GYBU! IYEB XOHD MVEO SC RSNNOX CYWOGROBO
+
+TO DO: PUT A PROPER CLUE (encrypt.py) (make sure it has the word the)
+
+\paragraph{Bonus} How would you go about determining the key if you didn't already know its value? (Hint: ``the'' is the most common three-letter word in the English language.)
+
+\newpage
+
+\section*{Clue 2: Authentication}
+
+In the last clue, we learned about \textit{encryption}, which lets us send a message to someone without anyone else being able to read it. 
+
+Suppose you're sitting in class, writing notes on paper and passing them to your friend. The teacher notices and makes you two sit on opposite sides of the room. Now, this obviously won't stop you from passing notes, but now they have to go through 5 other people to get to the recipient. If any one of those 5 people was feeling rude, they could change the contents of your note.
+
+TODO add picture of before and after note.
+
+Now, even if it was encrypted, your friend can't necessarily tell what you wrote and what was rudely changed by someone else. Our new goal is to find a way to check whether the text of the note you receive is the same as the text of the note that was sent. This is called \textit{authentication}.
+
+To do this, we use a tool called a hash function. It takes in a message and outputs a short bit of gibberish. It's a one-way function, which means you can't go from gibberish to message. But, for any given message, it always outputs the same gibberish. 
+
+TODO add a diagram of this.
+
+When you write a note, you'll calculate the hash of the message and write it at the end. When your friend receives the note, they'll calculate its hash and make sure it's the same as the one you provided. If they're different, she'll know someone tampered with the note.
+
+Only one of these clues has a correct hash. You can check hashes at TODO:URL. Find the correct clue to get your next challenge!
+
+TODO add clues.
+
+\newpage
+
+\section*{Clue 3: ENIAC}
+
+\newpage
+
+\section*{Clue 4: Designing an Algorithm}
+\newpage
+
+\section*{Clue 5: What is a number, anyways?}
+\newpage
+
+\section*{Clue 6: Picture perfect}
+
+\end{document}
+
+
+
+

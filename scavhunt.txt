@@ -6,13 +6,11 @@ PRIZES
 Let's be honest, probably candy. Is there a way to make this topical? 
 
 PROPOSED ORDER
-Caesar cipher (15 min) -> HMAC (10? min) -> ENIAC (5 min) 
-  -> Image description (10 min)
+Caesar cipher (15 min) -> HMAC (10? min) -> ENIAC (5 min) -> algorithms (10)
+  -> binary representations (5-10) -> Image description (10 min)
 
 WORK REMAINING
   - create clue materials
-  - add some more clues, probably. This should probably happen during the 1-hr
-    section and in its current state, it's not more than 40 min of activity.
   - Image clue: decide whether this short lecture happens at the previous clue
     or if it'll just be written down on the paper.
 
@@ -221,3 +219,41 @@ Joke/puzzle: There are 10 types of people in the world: those who understand
 binary, and those who don't.
 
 Other activities/approach: http://csunplugged.org/binary-numbers/
+
+
+> Algorithm Design
+
+Materials: PB (?), jelly, bread, ziploc baggies, knife. Written clue.
+
+Clue: Computers are pretty straightforward machines. You tell them what to do,
+and they do it. If you tell it to do something unreasonable, it won't
+sanity-check you. It'll just do it. 
+
+The set of instructions you give a computer is called an _algorithm_. For
+example, you programmed the microbit earlier this week. If you wanted it to
+blink one of the pixels, you'd give it an algorithm like,
+
+  1. turn on pixel (3,3).
+  2. wait 1 second.
+  3. turn off pixel (3,3).
+  4. wait 1 second.
+  5. repeat steps 1-4.
+
+Today we'll try a different kind of algorithm. Describe how to create a
+peanut-butter and jelly sandwich. Write down the steps here. When you're
+satisfied with your algorithm, bring it to an instructor to check. When you have
+a successful algorithm, you will receive your next clue.
+
+< take instructions very literally. send them back, but not more than twice >
+
+
+
+
+
+
+
+
+
+
+
+
