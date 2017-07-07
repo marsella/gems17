@@ -194,7 +194,7 @@ someone has changed the message, and you probably shouldn't trust it.
 > Binary
 How do computers represent numbers?
 
-Materials: ?
+Materials: dot cards (1,2,4,8,16)
 
 First, what is a number system? Numbers tell us how many of something there is,
 but there are different ways to represent numbers. Ask for examples. (base 10,

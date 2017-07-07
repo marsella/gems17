@@ -1,5 +1,8 @@
 \documentclass{article}
 \usepackage[margin=1.5in]{geometry}
+\usepackage{enumitem}
+\usepackage[table]{xcolor}
+\usepackage{multirow}
 
 \begin{document}
 
@@ -42,16 +45,136 @@ TODO add clues.
 \newpage
 
 \section*{Clue 3: ENIAC}
+ENIAC was one of the first programmable computers ever made. It was designed for use by the United States army and was used mainly to do calculations. The advent of computers meant that calculations that took hours or days to do by hand, only took minutes to solve automatically.
+
+Do some research on ENIAC. To receive your next clue, go to the current location of ENIAC and report the names of the first six computer programmers for ENIAC.
+
+TODO more questions?
 
 \newpage
 
 \section*{Clue 4: Designing an Algorithm}
+Computers are pretty straightforward creatures: you tell them what to do, and they do it. If you tell it to do something unreasonable, it won't sanity-check you. It'll go ahead and do \textit{exactly} what you asked for.
+
+The set of instructions you give a computer is called an \textit{algorithm}. 
+
+For example, in Clue 1, you used the Caesar cipher algorithm to encrypt text like this:
+\begin{enumerate}[noitemsep]
+  \item choose a letter as your key
+  \item line up A on your cipher circle with your key
+  \item write down the word you'd like to encrypt.
+  \item for each letter in the word, find the corresponding letter in your cipher circle
+  \item write down the encrypted message.
+\end{enumerate}
+
+
+For example, you programmed the microbit earlier this week. If you wanted it to blink one of the pixels, you'd give it an algorithm like,
+
+\begin{enumerate}[noitemsep]
+  \item turn on pixel (3,3).
+  \item wait 1 second.
+  \item turn off pixel (3,3).
+  \item wait 1 second.
+  \item repeat steps 1-4.
+\end{enumerate}
+
+Today we'll try a different kind of algorithm. Describe how to create a peanut-butter and jelly sandwich. Write down the steps below. When you're satisfied with your algorithm, bring it to an instructor to check. Once your algorithm creates a standard sandwich, you will receive your next clue.
+
 \newpage
 
 \section*{Clue 5: What is a number, anyways?}
+
+
 \newpage
 
 \section*{Clue 6: Picture perfect}
+In the last clue, you learned how to represent numbers in binary. This clue will also deal with representation.
+
+We've learned how to encrypt and authenticate a text-based message. However, in many cases we may wish to send a different type of data, like a picture or a movie. In order to use our existing encryption methods, we need to find a way to represent images using only text. This clue examines one way.
+
+If you've ever heard a TV ad, you'll notice that they usually brag about some kind of number: 1080i or 720p. That number is referring to the number of pixels on the screen: a 1080 TV screen is actually made up of a giant grid of pixels, 1920 wide and 1080 tall. Each pixel can be a single color at a given time, so more pixels means a higher-definition image.
+
+What this also means is that we can define single moment on a TV screen by listing out the color of each pixel. This means we need two things: a unique way to reference each pixel, and a way to define colors. Usually, color is defined as a triple of values: how much do you have of red, blue, and green? Today, we're going to simplify that aspect and work in black and white. Basically, if a pixel is  ``on'' then it's black, and if it's ``off'', it's white. 
+
+
+The problem that remains is how we're going to refer to each pixel. Let's look at a much smaller example.
+
+\begin{center}
+\begin{tabular}{*{5}{|c}|}
+\hline
+ &  &  &  &  \\ \hline
+ &  &  &  &  \\ \hline
+ &  &  &  &  \\ \hline
+\end{tabular}
+\end{center}
+
+Here we have a $3\times 5$ grid of pixels. A very tiny TV, if you will. There are a couple ways we could refer to this. We could just number the boxes.
+
+\begin{center}
+\begin{tabular}{*{5}{|c}|}
+\hline
+1 & 2 & 3 & 4 & 5 \\ \hline
+6 & 7 & 8 & 9 & 10 \\ \hline
+11 & 12 & 13 & 14 & 15 \\ \hline
+\end{tabular}
+\end{center}
+
+If we want to color in the top box in the middle, we'd add a step to our algorithm:
+
+
+\begin{minipage}[c]{.4\linewidth}
+\center
+turn on box 2
+\end{minipage}
+\begin{minipage}[c]{.2\linewidth} $\rightarrow$ \end{minipage}
+\begin{minipage}[c]{.4\linewidth}
+\center
+\begin{tabular}{*{5}{|c}|}
+\hline
+ & \cellcolor{gray!25} & & & \\ \hline
+ & & & & \\ \hline
+ & & & & \\ \hline
+\end{tabular}
+\end{minipage}
+
+
+But if we're going to get into massive grids the size of TV screens and larger, these numbers will get really large, really quickly. We'll need a more efficient way of referring to the boxes.
+
+Since we're dealing with a rectangular grid, every box has both a row and a column. We could use the row and column to uniquely refer to the boxes, which decreases the size of the numbers we use to refer to elements, with a tradeoff of needing two numbers for each box. 
+
+\begin{center}
+\begin{tabular}{*{7}{c|}}
+\multicolumn{1}{c}{} & \multicolumn{6}{c}{Columns} \\ 
+\multicolumn{2}{c}{} & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} 
+\\ \cline{3-7}
+\multirow{3}{*}{Rows} & 1 & & & & & \\ \cline{3-7}
+                      & 2 & & & & & \\ \cline{3-7}
+                      & 3 & & & & & \\ \cline{3-7}
+\end{tabular}
+\end{center}
+
+TODO get rid of this dumb vertical line
+
+To color in the same box as before, we'd refer to it by its row and column: 
+
+\begin{minipage}[c]{.4\linewidth}
+\center
+turn on box (1,2) 
+\end{minipage}
+\begin{minipage}[c]{.2\linewidth} $\rightarrow$ \end{minipage}
+\begin{minipage}[c]{.4\linewidth}
+\center
+\begin{tabular}{*{5}{|c}|}
+\hline
+ & \cellcolor{gray!25} & & & \\ \hline
+ & & & & \\ \hline
+ & & & & \\ \hline
+\end{tabular}
+\end{minipage}
+
+Your final clue is an image, but we've encoded it into text format. To complete the scavenger hunt, you'll need to convert it back to an image. Color in the given coordinates to finish!
+
+TODO add puzzle
 
 \end{document}
 
