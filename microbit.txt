@@ -18,10 +18,24 @@ Day 1: Language: javascript blocks
 	input: shake
 
 3) Extra activity: Something with communicating micro:bits, or music
+	Fireflies: https://makecode.microbit.org/projects/fireflies
+	Rock paper scissors with communication as a 2-person game -- the problem
+		with this is that when you have many microbits going at once, it's hard
+		to keep track.
+	Compass: https://makecode.microbit.org/projects/compass
 
-Day 2: Language: Python
+Encourage students to look at documentation!
 
-There's lots of info in the docs:
-http://microbit-micropython.readthedocs.io/en/latest/tutorials/introduction.html
-I'm not sure, this might be a lot of info to do in one session. Is it better to
-give more in-depth programming problems?
+Day 2
+
+1) broadcast your name & say hi to others
+
+2) send message to specific person
+
+3) rock/paper/scissors broadcast to everyone
+
+4) keep score
+
+Bonus: choose the channel using binary input
+
+Bonus: read encrypted message from us
