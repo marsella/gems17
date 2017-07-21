@@ -38,3 +38,33 @@ Lesson plans: Michaille told us each group will have (2) 1.5 hour sessions, plus
 TODO: 
 	- work on scavenger hunt 
 	- brainstorm programming problems
+
+
+=== July 21 ============
+
+To do: 
+  - work up binary activity (Achala)
+  - web form that checks password (Marcella)
+  - Ask for materials from Michaile (Marcella)
+  - Write up "notes" from authentication activity (Jennifer)
+  - Finish authentication activity (Marcella)
+  - ENIAC activity: figure out what questions to ask--scope it out (Achala)
+  - print out instructions (Marcella)
+	* 8(+2) copies of group instructions
+	* 24 copies of ...
+  - test pixels activity (Jennifer)
+  - put scavenger hunt activities online (Jennifer)
+
+Materials list:
+  - loaf of bread
+  - stick of butter
+  - jelly 
+  - knife
+  - paper towels/wet wipes
+  - plastic baggies
+  - candy
+  - pencils
+  - markers for pixels
+  - extra batteries (AAA)  
+
+
