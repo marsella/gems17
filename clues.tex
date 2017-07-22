@@ -4,6 +4,18 @@
 \usepackage[table]{xcolor}
 \usepackage{multirow}
 \usepackage{tikz}
+\usepackage{hyperref}
+
+% macro for repeating _ several times
+\makeatletter
+\newcount\my@repeat@count
+\newcommand{\myrepeat}[2]{%
+  \begingroup
+    \my@repeat@count=\z@
+      \@whilenum\my@repeat@count<#1\do{#2\advance\my@repeat@count\@ne}%
+        \endgroup
+}
+\makeatother
 
 \begin{document}
 
@@ -15,11 +27,17 @@ The key is \textbf{K}.
 
 \vspace{5mm}
 
-TO DO: PUT A PROPER CLUE (encrypt.py) (make sure it has the word the)
-"NICE WORK! THE NEXT CLUE IS AT:
- SEAS.UPENN.EDU/~JPAYKIN/GEMS/AUTH.PDF"
+NICE WORK! THE NEXT CLUE IS AT: SEAS.UPENN.EDU/~JPAYKIN/GEMS/AUTH.PDF
+\begin{tabular}{*{100}{@{\hskip3pt}c}}
+X & S & M & O & ! \\
+\underline{\hspace{.5cm}} & \underline{\hspace{.5cm}} & \underline{\hspace{.5cm}} & \underline{\hspace{.5cm}} & !  \\
 
-TODO host next clue.
+D & R & O &   & X & O & H & D &   & M & V & E & O &   & S & C &   & K & D & : \\ 
+\underline{\hspace{.5cm}} & \underline{\hspace{.5cm}} & \underline{\hspace{.5cm}} &   & \underline{\hspace{.5cm}} & \underline{\hspace{.5cm}} & \underline{\hspace{.5cm}} & \underline{\hspace{.5cm}} &   & \underline{\hspace{.5cm}} & \underline{\hspace{.5cm}} & \underline{\hspace{.5cm}} & \underline{\hspace{.5cm}} &   & \underline{\hspace{.5cm}} & \underline{\hspace{.5cm}} &   & \underline{\hspace{.5cm}} & \underline{\hspace{.5cm}} & : \\ 
+
+\end{tabular}
+
+TODO pick a location (not a url, too long)
 
 \paragraph{Bonus} How would you go about determining the key if you didn't already know its value? (Hint: ``the'' is the most common three-letter word in the English language.)
 
@@ -31,24 +49,29 @@ In the last clue, we learned about \textit{encryption}, which lets us send a mes
 
 Suppose you're sitting in class, writing notes on paper and passing them to your friend. The teacher notices and makes you two sit on opposite sides of the room. Now, this obviously won't stop you from passing notes, but now they have to go through 5 other people to get to the recipient. If any one of those 5 people was feeling rude, they could change the contents of your note.
 
-TODO add picture of before and after note.
+\begin{minipage}{\textwidth}
+\centering
+\includegraphics[width=.6\textwidth]{tampered}
+\end{minipage}
 
 Now, even if it was encrypted, your friend can't necessarily tell what you wrote and what was rudely changed by someone else. Our new goal is to find a way to check whether the text of the note you receive is the same as the text of the note that was sent. This is called \textit{authentication}.
 
 To do this, we use a tool called a hash function. It takes in a message and outputs a short bit of gibberish. It's a one-way function, which means you can't go from gibberish to message. But, for any given message, it always outputs the same gibberish. 
 
-TODO add a diagram of this.
+\begin{minipage}{\textwidth}
+\centering
+\includegraphics[width=.7\textwidth]{hash}
+\end{minipage}
 
 When you write a note, you'll calculate the hash of the message and write it at the end. When your friend receives the note, they'll calculate its hash and make sure it's the same as the one you provided. If they're different, she'll know someone tampered with the note.
 
-Only one of these clues has a correct hash. You can check hashes at TODO:URL. Be sure to type the clues \textit{exactly}: even captialization will change the hash (check this by comparing the hashes for "wow" and "WOW".) Identify the correct clue to get your next challenge!
+Only one of these clues has a correct hash. You can check hashes at \url{http://www.seas.upenn.edu/~jpaykin/gems/auth.html}. Be sure to type the clues \textit{exactly}: even capitalization will change the hash (try comparing the hashes for ``wow'' and ``WOW''.) Identify the correct clue to get your next challenge!
 
-TODO add clues.
 \begin{enumerate}
-  \item Get your next clue in Towne 100. (hash: 123456)
-  \item Get your next clue at your grandmother's house. (hash: 349092)
-  \item Get your next clue from Achala. (hash: 2032790601)
-  \item Get your next clue from under your desk (hash: 4098245890)
+  \item Get your next clue in Towne 100. \#c645be1c
+  \item Get your next clue at your grandmother's house. \#3c6292ca
+  \item Get your next clue from Achala. \#ac139d05
+  \item Get your next clue from under your desk. \#bbee200f
 \end{enumerate}
 
 \newpage
@@ -65,20 +88,27 @@ TODO more questions?
 \section*{Clue 4: Designing an Algorithm}
 Computers are pretty straightforward creatures: you tell them what to do, and they do it. If you tell it to do something unreasonable, it won't sanity-check you. It'll go ahead and do \textit{exactly} what you asked for.
 
-The set of instructions you give a computer is called an \textit{algorithm}. 
-
-For example, in Clue 1, you used the Caesar cipher algorithm to encrypt text like this:
+The set of instructions you give a computer is called an \textit{algorithm}. For example, in Clue 1, you used the Caesar cipher algorithm to encrypt text like this:
 \begin{enumerate}[noitemsep]
-  \item choose a letter as your key
-  \item line up A on your cipher circle with your key
-  \item write down the word you'd like to encrypt.
-  \item for each letter in the word, find the corresponding letter in your cipher circle
-  \item write down the encrypted message.
+  \item Choose a letter as your key
+  \item Line up A on the cipher circle with your key
+  \item Write down the word you'd like to encrypt.
+  \item For each letter in the word, write down the corresponding cipher letter (according to the cipher circle) underneath the original letter.
+  \item The letters you write down are the encrypted message.
 \end{enumerate}
 
+Today we'll try a different kind of algorithm. Describe how to create a butter and jelly sandwich. Write down the steps below. When you're satisfied with your algorithm, bring it to an instructor to check. Once your algorithm creates a standard sandwich, you will receive your next clue. Feel free to add more steps!
 
-
-Today we'll try a different kind of algorithm. Describe how to create a butter and jelly sandwich. Write down the steps below. When you're satisfied with your algorithm, bring it to an instructor to check. Once your algorithm creates a standard sandwich, you will receive your next clue.
+\paragraph{Sandwich Instructions:}
+\begin{enumerate}
+  \item
+  \item
+  \item
+  \item
+  \item
+  \item
+  \item
+\end{enumerate}
 
 \newpage
 
@@ -89,14 +119,13 @@ figure out the binary representation of a number, that's the password to get int
 \newpage
 
 \section*{Clue 6: Picture perfect}
-We've learned how to encrypt and authenticate a text-based message. However, in many cases we may wish to send a different type of data, like a picture or a movie. In order to use our existing encryption methods, we need to find a way to represent images using only text.
+We've learned how to encrypt and authenticate a text-based message. However, in many cases we may wish to send a different type of data, like a picture. In order to use our existing encryption methods, we need to find a way to represent images using only text.
 
 You may have seen a TV ad that brags about a number, like 1080i or 720p. That number refers to the number of pixels on the screen: a 1080 TV screen is actually made up of a giant grid of pixels, 1920 wide and 1080 tall. Each pixel can be a single color at a given time, so more pixels means a higher-definition image.
 
-What this also means is that we can define single moment on a TV screen by listing out the color of each pixel. This means we need two things: a unique way to reference each pixel, and a way to define colors. Usually, color is defined as a triple of values: how much do you have of red, blue, and green? Today, we're going to simplify that aspect and work in black and white. Basically, if a pixel is  ``on'' then it's black, and if it's ``off,'' it's white. 
+What this also means is that we can define single moment on a TV screen by listing out the color of each pixel. This means we need two things: a unique way to reference each pixel, and a way to determine the color. We'll deal with black and white images today: if a pixel is  ``on'' then it's black, and if it's ``off,'' it's white. 
 
-
-The problem that remains is how we're going to refer to each pixel. Let's look at a much smaller example.
+The problem that remains is how we're going to refer to each pixel. Let's look at a small example.
 
 \begin{center}
 \begin{tabular}{*{5}{|c}|}
@@ -137,7 +166,7 @@ turn on box 2
 \end{minipage}
 
 
-But if we're going to get into massive grids the size of TV screens and larger, these numbers will get really large, really quickly. We'll need a more efficient way of referring to the boxes.
+But if we're going to get into massive grids the size of TV screens and larger, these numbers will get really large, really quickly. We need a more efficient way to label the boxes.
 
 Since we're dealing with a rectangular grid, every box has both a row and a column. We could use the row and column to uniquely refer to the boxes, which decreases the size of the numbers we use to refer to elements, with a tradeoff of needing two numbers for each box. 
 
@@ -193,7 +222,7 @@ Your final clue is an image, but we've encoded it into text format. To complete 
 
 \begin{tikzpicture}
   \draw (0,0) grid (13,13);
-  \foreach \x in {1,2,3,4,5,6,7,8,9,10,11,12,13}{
+  \foreach \x in {1,...,13}{
     \node[anchor=east] at (0, 13.5 -\x) {\x};
     \node[anchor=south] at (\x - 0.5,13) {\x};
   }
