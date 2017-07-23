@@ -1,10 +1,11 @@
 \documentclass{article}
-\usepackage[margin=1.5in]{geometry}
+\usepackage[margin=1.2in]{geometry}
 \usepackage{enumitem}
 \usepackage[table]{xcolor}
 \usepackage{multirow}
 \usepackage{tikz}
 \usepackage{hyperref}
+\pagenumbering{gobble} % turn off page numbers
 
 
 \begin{document}
@@ -75,10 +76,70 @@ Only one of these clues has a correct hash. You can check hashes at \url{http://
 \newpage
 
 \section*{Clue 3: What is a number, anyways?}
-TODO port \url{http://csunplugged.org/wp-content/uploads/2014/12/unplugged-01-binary_numbers.pdf} here.
 
-To find the next clue, go to \url{www.seas.upenn.edu/~jpaykin/gems/passwd.html}. Convert the following number to binary and enter it as the password.
-$$72$$
+Did you know that computers only understand only 0s and 1s? Everything that you
+see or hear on the computer—words, pictures, numbers, movies and even sound is
+stored using just those two numbers! But how? 
+
+Numbers can be represented in all sorts of ways. We usually think of numbers in
+the \emph{decimal} or \emph{base-ten} representation, like $3$, $49$, or $205$.
+It's called base-ten because there are ten digits:
+\begin{center}\begin{tabular}{cccccccccc}
+    0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9
+\end{tabular}\end{center}
+When you have numbers larger than nine, each extra digit is multiplied by a
+power of ten:
+\[
+    49 = 4\times10 + 9\times1 \qquad\textrm{and}\qquad 
+    205 = 2\times100 + 0\times10 + 5\times1
+\]
+The \emph{binary} representation is called base-two, because it uses only
+two digits: 0 and~1. 
+
+To understand binary, take a look at the five cards in front of you, which are
+powers of two:
+
+\begin{minipage}{\textwidth}
+\centering
+\includegraphics[width=.7\textwidth]{dots}
+\end{minipage}
+To represent a number, each card can either be turned up (displaying the dots)
+or turned down (blank). Add up the number of dots shown to get the total number.
+For example, to represent the number nine, you would use the following
+combination of dots:
+
+\begin{minipage}{\textwidth}
+\centering
+\includegraphics[width=.7\textwidth]{dots9}
+\end{minipage}
+Since we count the dots that are flipped upwards, but not the cards that are
+flipped down, we can also think of that number as $0\times16 + 1\times8 +
+0\times4 + 0\times2 + 1\times1$. In binary, this number is written $01001$:
+
+\begin{minipage}{\textwidth}
+\centering
+\includegraphics[width=.7\textwidth]{dots9'}
+\end{minipage}
+
+Practice using your own cards:
+\begin{enumerate}
+    \item What is the binary representation of the decimal number 4? % 00100
+    \item What is the binary representation of the decimal number 12? % 01100
+    \item What is the decimal representation of the binary number 10101? % 21
+\end{enumerate}
+There are 10 types of people in this world: those who understand binary, and
+those who don't!
+
+
+%TODO port \url{http://csunplugged.org/wp-content/uploads/2014/12/unplugged-01-binary_numbers.pdf} here.
+
+
+To get your next clue, string together your answers to the questions above to
+get a password (Hint: you will have 12 digits total), which you should enter in
+the box at
+\begin{center}
+    \url{www.seas.upenn.edu/~jpaykin/gems/passwd.html}
+\end{center}
 Good luck!
   
 \newpage
