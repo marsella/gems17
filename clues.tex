@@ -53,7 +53,7 @@ Suppose you're sitting in class, writing notes on paper and passing them to your
 \includegraphics[width=.6\textwidth]{tampered}
 \end{minipage}
 
-Now, even if it was encrypted, your friend can't necessarily tell what you wrote and what was rudely changed by someone else. Our new goal is to find a way to check whether the text of the note you receive is the same as the text of the note that was sent. This is called \textit{authentication}.
+Now your friend can't tell what you wrote and what was changed by someone else. Our new goal is to find a way to check whether the text of the note you receive is the same as the text of the note that was sent. This is called \textit{authentication}.
 
 To do this, we use a tool called a hash function. It takes in a message and outputs a short bit of gibberish. It's a one-way function, which means you can't go from gibberish to message. But, for any given message, it always outputs the same gibberish. 
 
@@ -78,7 +78,7 @@ Only one of these clues has a correct hash. You can check hashes at \url{http://
 \section*{Clue 3: What is a number, anyways?}
 
 Did you know that computers only understand only 0s and 1s? Everything that you
-see or hear on the computer—words, pictures, numbers, movies and even sound is
+see or hear on the computer---words, pictures, numbers, movies and even sound---is
 stored using just those two numbers! But how? 
 
 Numbers can be represented in all sorts of ways. We usually think of numbers in
@@ -160,9 +160,10 @@ Computers are pretty straightforward creatures: you tell them what to do, and th
 The set of instructions you give a computer is called an \textit{algorithm}. For example, in Clue 1, you used the Caesar cipher algorithm to encrypt text like this:
 \begin{enumerate}[noitemsep]
   \item Choose a letter as your key
-  \item Line up A on the cipher circle with your key
+  \item Write down the regular alphabet, starting with A.
+  \item Underneath that, write down your secret alphabet, starting with the key.
   \item Write down the word you'd like to encrypt.
-  \item For each letter in the word, write down the corresponding cipher letter (according to the cipher circle) underneath the original letter.
+  \item For each letter in the word, find the corresponding secret letter and write it underneath the original letter.
   \item The letters you write down are the encrypted message.
 \end{enumerate}
 
