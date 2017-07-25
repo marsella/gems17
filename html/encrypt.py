@@ -18,7 +18,7 @@ else:
 
 key = ord(key) - ord('A')
 
-cipher = [chr((ord(l) + key - ord('A'))%26 + ord('A'))
+cipher = [chr((ord(l) - key - ord('A'))%26 + ord('A'))
             if l.isalpha() else l
             for l in message]
 print ''.join(cipher)
