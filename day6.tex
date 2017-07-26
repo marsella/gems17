@@ -1,0 +1,89 @@
+\documentclass{article}
+
+\usepackage[margin=1.2in]{geometry}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+
+\begin{document}
+\title{GEMS Computer Science: Rocket Ships!}
+\date{}
+\maketitle
+
+\begin{multicols*}{2}
+You're the pilot of a rocket ship, hurtling through space. Suddenly, a field of asteroids appears. Uh oh! You'll have to use your expert navigational skills to avoid the rocks and save the ship.
+
+\section{Games in micro:bit}
+The micro:bit programming environment provides a set of tools for making games. We'll use several parts of it today:
+\begin{itemize}
+  \item Sprites: a sprite represents an object in the game. You can \texttt{create} a sprite and store it in a variable. Once it exists, you can adjust its location using the \texttt{move}, \texttt{change}, and \texttt{set} functions.
+  \item Scores: you can \texttt{change} and \texttt{set} the score just like a normal variable.
+  \item Game Over: When something happens that causes the player to lose, you can use the game over block to end the game and show the final score.
+\end{itemize}
+
+\section{Moving around on a grid}
+As we learned in the scavenger hunt, a common way to refer to items in a grid is by using row and column numbers.
+
+\begin{center}
+\begin{tabular}{*{7}{c|}}
+\multicolumn{1}{c}{} & \multicolumn{6}{c}{Columns (x)} \\ 
+\multicolumn{2}{c}{} & \multicolumn{1}{c}{0} & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} 
+\\ \cline{3-7}
+\multirow{5}{*}{Rows (y)} & 0 & & & & & \\ \cline{3-7}
+                      & 1 & & & & & \\ \cline{3-7}
+                      & 2 & & & & & \\ \cline{3-7}
+                      & 3 & & & & & \\ \cline{3-7}
+                      & 4 & & & & & \\ \cline{3-7}
+\end{tabular}
+\end{center}
+
+This is how we direct the placement of a sprite. For example, if we wanted to create a sprite in the upper center of the LED screen, we'd say
+\begin{center}
+\texttt{create sprite at x:2 y:0}
+
+\vspace{4mm}
+
+\begin{tabular}{*{5}{|c}|}
+\hline
+& & \cellcolor{gray!25} & & \\ \hline
+ & & & & \\ \hline
+ & & & & \\ \hline
+\end{tabular}
+\end{center}
+
+You can assign a sprite to a variable, and refer to it throughout the code.
+
+\paragraph{Task 1:} Make a sprite (your rocket) that stays on the bottom row of the screen. Make it move left when you press A and right when you press B.
+
+\section{Asteroids}
+Asteroids are falling from the sky towards your ship! They come from all directions and fall straight downwards.
+
+Yesterday, we learned about choosing random numbers in our rock-paper-scissors game. Now, we'll randomly choose a starting position for the asteroid sprite. 
+% Since it always comes from the top, the row (y) will always start at 0, but the column should be different each time.
+
+Once we create the asteroid, we need to make it fall. When we program, we use a loop to repeat an action multiple times. There are different types of loops, but today we'll use the simplest type, since we know exactly how far the asteroid has to fall (hint: how many pixels can it fall from the top to the bottom of the screen?)
+
+In the body of the loop, we want to do two things. First, we'll pause to see where the asteroid is. Otherwise, it would fall so fast we'd never be able to avoid it! Second, we'll change it's location, and make it move down the board by one pixel. 
+
+\paragraph{Task 2:} Create an asteroid. Make it fall down the screen, pausing for 1000 ms in each position. Delete it when it gets to the bottom.
+
+Where should this code go? We never want the game to stop, so you should put it in a basic block that will make it repeat endlessly.
+
+\section{Winning and losing}
+If an asteroid hits your ship, you won't be able to fly anymore. How do you know that you've had a collision? Think about the \texttt{x} and \texttt{y} coordinates of your ship and the asteroid. When the game ends, you can use the \texttt{game over} block to end the game.
+
+What block do we use when we're testing if something is true? 
+
+\paragraph{Task 3:} When the asteroid finishes falling, check to see if the ship has collided with it. If so, end the game!
+
+A good pilot likes to test their skills and see if they're improving. You may want to keep score to see how many asteroids you dodged. Think about when you would want to increase your score.
+
+\paragraph{Task 4:} Keep score! Your total score should be the number of asteroids you dodge.
+
+TO DO: Making pauses shorter. Multiple enemies.
+
+List of other activities to try out.
+
+
+\end{multicols*}
+\end{document}
