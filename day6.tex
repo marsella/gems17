@@ -1,16 +1,21 @@
-\documentclass{article}
+\documentclass[11pt]{article}
 
 \usepackage[margin=1.2in]{geometry}
 \usepackage{multicol}
 \usepackage{multirow}
 \usepackage[table]{xcolor}
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem{task}{Task}
+
 
 \begin{document}
 \title{GEMS Computer Science: Rocket Ships!}
 \date{}
 \maketitle
 
-\begin{multicols*}{2}
+%\begin{multicols*}{2}
 You're the pilot of a rocket ship, hurtling through space. Suddenly, a field of asteroids appears. Uh oh! You'll have to use your expert navigational skills to avoid the rocks and save the ship.
 
 \section{Games in micro:bit}
@@ -53,37 +58,90 @@ This is how we direct the placement of a sprite. For example, if we wanted to cr
 
 You can assign a sprite to a variable, and refer to it throughout the code.
 
-\paragraph{Task 1:} Make a sprite (your rocket) that stays on the bottom row of the screen. Make it move left when you press A and right when you press B.
+\begin{task}
+Make a sprite (your rocket) that stays on the bottom row of the screen. Make it move left when you press A and right when you press B.
+\end{task}
 
 \section{Asteroids}
 Asteroids are falling from the sky towards your ship! They come from all directions and fall straight downwards.
 
 Yesterday, we learned about choosing random numbers in our rock-paper-scissors game. Now, we'll randomly choose a starting position for the asteroid sprite. 
-% Since it always comes from the top, the row (y) will always start at 0, but the column should be different each time.
+% Since it always comes from the top, the row (y) will always start at 0, but
+% the column should be different each time.
 
-Once we create the asteroid, we need to make it fall. When we program, we use a loop to repeat an action multiple times. There are different types of loops, but today we'll use the simplest type, since we know exactly how far the asteroid has to fall (hint: how many pixels can it fall from the top to the bottom of the screen?)
+\begin{task}
+Create an asteroid at the top of the screen. The column that
+the asteroid is in should be randomly chosen.
+\end{task}
 
-In the body of the loop, we want to do two things. First, we'll pause to see where the asteroid is. Otherwise, it would fall so fast we'd never be able to avoid it! Second, we'll change it's location, and make it move down the board by one pixel. 
+Once we create the asteroid, we need to make it fall. When we program, we use a
+loop to repeat an action multiple times. There are different types of loops, but
+today we'll use a \texttt{repeat} loop, which just repeats a sequence of steps
+some number of times. How many times should the loop execute? (Hint: how many
+pixels does the asteroid need to fall to get from the top to the bottom of the screen?)
 
-\paragraph{Task 2:} Create an asteroid. Make it fall down the screen, pausing for 1000 ms in each position. Delete it when it gets to the bottom.
+In the body of the loop, we want to do two things. First, we'll pause to see
+where the asteroid is. Otherwise, it would fall so fast we'd never be able to
+avoid it! Second, we'll change it's location, and make it move down the board by
+one pixel.
 
-Where should this code go? We never want the game to stop, so you should put it in a basic block that will make it repeat endlessly.
+\begin{task}
+Make your asteroid fall down the screen, pausing for 1000 ms
+in each position. Delete it when it gets to the bottom.
+\end{task}
+
+Where should this code go? We never want the game to stop, so you should put it
+in a basic block that will make it repeat endlessly.
 
 \section{Winning and losing}
-If an asteroid hits your ship, you won't be able to fly anymore. How do you know that you've had a collision? Think about the \texttt{x} and \texttt{y} coordinates of your ship and the asteroid. When the game ends, you can use the \texttt{game over} block to end the game.
+If an asteroid hits your ship, you won't be able to fly anymore. How do you know
+that you've had a collision? Think about the \texttt{x} and \texttt{y}
+coordinates of your ship and the asteroid. When the game ends, you can use the
+\texttt{game over} block to end the game.
 
 What block do we use when we're testing if something is true? 
 
-\paragraph{Task 3:} When the asteroid finishes falling, check to see if the ship has collided with it. If so, end the game!
+\begin{task}
+When the asteroid finishes falling, check to see if the ship
+has collided with it. If so, end the game!
+\end{task}
 
 A good pilot likes to test their skills and see if they're improving. You may want to keep score to see how many asteroids you dodged. Think about when you would want to increase your score.
 
-\paragraph{Task 4:} Keep score! Your total score should be the number of asteroids you dodge.
+\begin{task}
+Keep score! Your total score should be the number of asteroids you dodge.
+\end{task}
 
-TO DO: Making pauses shorter. Multiple enemies.
+\section{Extra challenges}
 
-List of other activities to try out.
+So far, it's been pretty easy to dodge the asteroids. It will be a little
+tougher if asteroids start moving faster and faster every time. The ``speed'' of
+the asteroids depends on the length of the pauses in your loop. To make the
+speed increase over time, you will need to change the length of those pauses.
+
+\begin{task}
+Adapt your code so that every new asteroid falls 100ms faster
+than the previous one.
+\end{task}
+
+It's also harder to dodge multiple asteroids at once! 
+
+\begin{task}
+  Add a second asteroid to your game so that you have to dodge two asteroids at
+  once. The second asteroid should be in a randomly generated column,
+  independent of the first asteroid, but it should be one or two pixels behind
+  the first when falling.
+\end{task}
+
+%TO DO: Making pauses shorter. Multiple enemies.
+
+%List of other activities to try out.
 
 
-\end{multicols*}
+%\end{multicols*}
 \end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
