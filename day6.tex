@@ -15,7 +15,6 @@
 \date{}
 \maketitle
 
-%\begin{multicols*}{2}
 You're the pilot of a rocket ship, hurtling through space. Suddenly, a field of asteroids appears. Uh oh! You'll have to use your expert navigational skills to avoid the rocks and save the ship.
 
 \section{Games in micro:bit}
@@ -103,7 +102,7 @@ What block do we use when we're testing if something is true?
 
 \begin{task}
 When the asteroid finishes falling, check to see if the ship
-has collided with it. If so, end the game!
+has collided with it. If so, end the game.
 \end{task}
 
 A good pilot likes to test their skills and see if they're improving. You may want to keep score to see how many asteroids you dodged. Think about when you would want to increase your score.
@@ -112,16 +111,25 @@ A good pilot likes to test their skills and see if they're improving. You may wa
 Keep score! Your total score should be the number of asteroids you dodge.
 \end{task}
 
-\section{Extra challenges}
+\section{Leveling Up}
 
-So far, it's been pretty easy to dodge the asteroids. It will be a little
-tougher if asteroids start moving faster and faster every time. The ``speed'' of
-the asteroids depends on the length of the pauses in your loop. To make the
-speed increase over time, you will need to change the length of those pauses.
+Play the game for a while. What's your best score? Once you get the hang of it, you might want to make a bigger challenge. Brainstorm some ways to make it harder.
+\begin{enumerate}
+\item \underline{\hspace{\linewidth}}
+\item \underline{\hspace{\linewidth}}
+\item \underline{\hspace{\linewidth}}
+\end{enumerate}
+
+How would you code each method? What new variables do you need? Where will you need to check conditions? 
 
 \begin{task}
-Adapt your code so that every new asteroid falls 100ms faster
-than the previous one.
+Make the game harder. You can use one of your ideas, or try one of our suggestions below.
+\end{task}
+
+So far, it's been pretty easy to dodge the asteroids. One way to make it tougher is to make the asteroids fall faster. There are several options of how to do this. You could make them fall at a random speed. You could make them fall faster as the score increases. You could let the player decide when they go faster by pressing the A and B buttons at the same time. The ``speed'' of the asteroids depends on the length of the pauses in your loop. To make the speed change, you will need to change the length of those pauses.
+
+\begin{task}
+Choose one of the methods to make asteroids fall faster. Adapt your code to change the speed of the asteroids.
 \end{task}
 
 It's also harder to dodge multiple asteroids at once! 
@@ -133,12 +141,20 @@ It's also harder to dodge multiple asteroids at once!
   the first when falling.
 \end{task}
 
-%TO DO: Making pauses shorter. Multiple enemies.
+\section{Extra Challenges}
+If you finish the rocket ship or want to try a different coding challenge, here are some ideas.
 
-%List of other activities to try out.
+\begin{itemize}
+\item Add a counter to your rock-paper-scissors game so that you can keep track of your score. For example, if you win, you can press the A button to add one to your wins, and the B button to add one to your losses.
 
+\item Try using the radio functions to send messages to your neighbors. Make sure you both set radio group to the same number. Then use the \texttt{radio send string} and \texttt{radio received string} blocks to send and receive messages.
 
-%\end{multicols*}
+\item People often use programming to examine their scientific data. Think about how you would plot a function (like y = 2x) on the microbit. In the LED shelf, you can plot specific points, rather than an entire LED screen.
+
+\item We learned about binary numbers on day one. Make a program that lets you input binary numbers (using A to input a 1 and B to input a 0). Print them on the screen. Then, try converting them to base-10 numbers and printing them out.
+
+\end{itemize}
+
 \end{document}
 
 %%% Local Variables:
